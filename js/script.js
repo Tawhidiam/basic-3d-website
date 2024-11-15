@@ -92,3 +92,15 @@ pages.forEach((_, index) => {
 })
 
 
+function checkScreenSize() {
+    const content = document.getElementById('content');
+
+    if (window.innerWidth <= 1024) {
+        content.style.display = 'none'; 
+      } else {
+        content.style.display = 'block';
+      }
+}
+
+const bodyContent = document.getElementById("content");
+const maxMediaQuery = window.matchMedia('(max-width: 1024px)');
